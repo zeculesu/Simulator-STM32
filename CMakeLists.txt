@@ -16,6 +16,10 @@ add_library(core_static STATIC ${CORE_SOURCES})
 add_executable(stm32_sim core/main.c)
 target_link_libraries(stm32_sim core_static)
 
-# qwen code к vs code подключить 
-# router ai.ru 
+# Тесты
+add_executable(test_gpio test/test_gpio.c $<TARGET_OBJECTS:core_static>)
+add_executable(test_simulator test/test_simulator.c $<TARGET_OBJECTS:core_static>)
+
+# qwen code к vs code подключить
+# router ai.ru
 # qwen coder next

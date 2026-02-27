@@ -22,4 +22,9 @@ uint8_t memory_read_byte(Memory *mem, uint32_t addr);
 // Запись байта (для будущего выполнения инструкций)
 void memory_write_byte(Memory *mem, uint32_t addr, uint8_t value);
 
+uint16_t memory_read_halfword(Memory *mem, uint32_t addr);
+
+// Чтение 32-битного слова (для периферии)
+uint32_t memory_read_word(Memory *mem, uint32_t addr);
+
 #endif // MEMORY_H
